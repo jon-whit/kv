@@ -2,24 +2,29 @@
 A simple gPRC persistent Key/Value store.
 
 ## Get Started
-1. Start the KV service.
+1. Build the service
+```console
+make build
+
+```
+2. Start the KV service.
 ```
 ./kv serve
 ```
 This will start the KV service by default on `:50052`.
 
-2. Write a key/value pair.
+3. Write a key/value pair.
 ```console
 grpcurl --plaintext -use-reflection -d '{"key": "foo", "value": {"string_value": "bar"}}' localhost:50052 kv.v1alpha1.KVService/Set
 ```
 > ℹ️ The `value` field of Set is defined as a [google.protobuf.Value](https://protobuf.dev/reference/protobuf/google.protobuf/#value) type. This allows developers to set dynamic values according to well-known protobuf types.
 
-1. Get a key/value pair.
+4. Get a key/value pair.
 ```console
 grpcurl --plaintext -use-reflection -d '{"key": "foo"}' localhost:50052 kv.v1alpha1.KVService/Get
 ```
 
-1. Delete a key.
+5. Delete a key.
 ```console
 grpcurl --plaintext -use-reflection -d '{"key": "foo"}' localhost:50052 kv.v1alpha1.KVService/Delete
 ```
