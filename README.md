@@ -36,7 +36,7 @@ Yes, to run the server on a different port you can provide the `--addr` flag. Fo
 
 2. Is there a per-request size limit for the keys and/or values being stored?
 
-Yes, To protect the server, the maximum request message size is limited to `1.5MiB`. If the total size of a request is greater than this value then you can expect an error to be returned from the server.
+Yes, to protect the server, the maximum request message size is limited to `1.5MiB`. If the total size of a request is greater than this value then you can expect an error to be returned from the server.
 
 ## Developers
 ### Build
