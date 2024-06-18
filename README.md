@@ -9,7 +9,7 @@ make build
 ```
 2. Start the KV service.
 ```
-./kv serve
+./kv
 ```
 This will start the KV service by default on `:50052`.
 
