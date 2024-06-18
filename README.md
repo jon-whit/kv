@@ -31,6 +31,7 @@ grpcurl --plaintext -use-reflection -d '{"key": "foo"}' localhost:50052 kv.v1alp
 
 ## FAQ
 1. Can I run the server on a different port than the default `:50052`?
+
 Yes, to run the server on a different port you can provide the `--addr` flag. For example, `./kv --addr ":8080"`
 
 2. Is there a per-request size limit for the keys and/or values being stored?
